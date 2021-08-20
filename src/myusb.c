@@ -16,8 +16,7 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
-#include <config.h>
-#if 0	/* Seems this is no longer needed at all */
+
 //#ifdef LINUX_OS
 
 /*
@@ -139,4 +138,4 @@ int myusb_bulk_read(usb_dev_handle *dev, int ep, char *bytes, int size,
 
 	return retrieved;
 }
-#endif /* LINUX_OS */
+

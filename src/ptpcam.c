@@ -17,7 +17,7 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <config.h>
+
 #include "ptp.h"
 #include <errno.h>
 #include <stdio.h>
@@ -31,7 +31,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <sys/mman.h>
-#include <usb.h>
+#include <libusb-1.0/libusb.h>
 
 #ifdef ENABLE_NLS
 #  include <libintl.h>
@@ -300,10 +300,7 @@ ptpcam_error (void *data, const char *format, va_list args)
 	fflush(stderr);
 }
 
-
-
-void
-init_ptp_usb (PTPParams* params, PTP_USB* ptp_usb, struct usb_device* dev)
+void init_ptp_usb (PTPParams* params, PTP_USB* ptp_usb, struct usb_device* dev)
 {
 	usb_dev_handle *device_handle;
 

@@ -21,6 +21,8 @@
 
 /* curently this file is included into ptp.c */
 
+#include "libptp-endian.h"
+
 static inline uint16_t
 htod16p (PTPParams *params, uint16_t var)
 {

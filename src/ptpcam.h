@@ -19,6 +19,8 @@
 #ifndef __PTPCAM_H__
 #define __PTPCAM_H__
 
+#include "myusb.c"
+
 #if 0	/* This is no longer needed at all */
 //#ifdef LINUX_OS
 #define USB_BULK_READ myusb_bulk_read
@@ -158,7 +160,7 @@ void send_generic_request (int busn, int devn, uint16_t reqCode, uint32_t *param
 
 struct usb_bus* init_usb(void);
 void close_usb(PTP_USB* ptp_usb, struct usb_device* dev);
-void init_ptp_usb (PTPParams*, PTP_USB*, struct usb_device*);
+void init_ptp_usb (PTPParams* params, PTP_USB* ptp_usb, struct usb_device* dev);
 void clear_stall(PTP_USB* ptp_usb);
 
 int usb_get_endpoint_status(PTP_USB* ptp_usb, int ep, uint16_t* status);

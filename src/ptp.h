@@ -24,7 +24,7 @@
 
 #include <stdarg.h>
 #include <time.h>
-#include "libptp-endian.h"
+#include <stdint.h>
 
 /* PTP datalayer byteorder */
 
