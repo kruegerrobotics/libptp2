@@ -31,7 +31,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <sys/mman.h>
-#include <libusb-1.0/libusb.h>
+
 
 #ifdef ENABLE_NLS
 #  include <libintl.h>
@@ -420,8 +420,7 @@ find_device (int busn, int devn, short force)
 	return NULL;
 }
 
-void
-find_endpoints(struct usb_device *dev, int* inep, int* outep, int* intep);
+
 void
 find_endpoints(struct usb_device *dev, int* inep, int* outep, int* intep)
 {
