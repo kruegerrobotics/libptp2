@@ -830,6 +830,8 @@ uint16_t ptp_getdevicepropvalue	(PTPParams* params, uint16_t propcode,
 uint16_t ptp_setdevicepropvalue (PTPParams* params, uint16_t propcode,
 				void* value, uint16_t datatype);
 
+ uint16_t ptp_transaction (PTPParams* params, PTPContainer* ptp, 
+				uint16_t flags, unsigned int sendlen, char** data);
 
 uint16_t ptp_sendgenericrequest (PTPParams* params, uint16_t reqcode,
 				uint32_t* reqparams, char** data,
