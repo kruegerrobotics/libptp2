@@ -31,7 +31,7 @@ mkdir build
 cd build
 cmake ../
 make 
-make install
+sudo make install
 ```
 
 Since this fork is development only there will be a lot of warnings.
